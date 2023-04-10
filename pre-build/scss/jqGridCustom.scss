@@ -1,0 +1,77 @@
+// maincolor
+$mainColor-mid: #E6700A; //head,lnb,btn
+$mainColor-middark: #DE5C06;  //login
+$mainColor-dark: #C94907;     //breadCrumb,gnb,checkbox
+
+/* jqGrid table custom */
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr{border-top-right-radius: 0;}
+  
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl{border-top-left-radius: 0;}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br{border-bottom-right-radius: 0;}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{border-bottom-left-radius: 0;}
+
+.ui-widget.ui-widget-content{border: 0;}
+.ui-widget-content{border-left: 0;}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active{border: 0;}
+
+.ui-th-column-header.ui-th-ltr[colspan="3"]{border-bottom: 1px solid #ddd;}
+.ui-th-column-header.ui-th-ltr[colspan="4"]{border-bottom: 1px solid #ddd;}
+.ui-th-column-header.ui-th-ltr[colspan="5"]{border-bottom: 1px solid #ddd;}
+
+.ui-jqgrid .ui-jqgrid-htable th div{overflow: inherit; height: auto;}
+
+.ui-jqgrid .ui-jqgrid-bdiv{overflow: hidden;}
+
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column{white-space: normal; overflow: inherit;}
+
+
+#wrap{
+    &.blueTheme{
+        .ui-state-highlight, 
+        .ui-widget-content .ui-state-highlight, 
+        .ui-widget-header .ui-state-highlight{color: #345284;}
+    }
+
+    &.purpleTheme{
+        .ui-state-highlight, 
+        .ui-widget-content .ui-state-highlight, 
+        .ui-widget-header .ui-state-highlight{color: #4E3484;}
+    }
+}
+
+/* 데이터 클릭 시 tr active 되는 부분 */
+.ui-state-highlight, 
+.ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight{border: 0; border-right: 1px solid #ddd; border-color: #ddd; background: #f4f4f4;}
+/* ---- */
+
+/* jqGrid checkbox */
+.ui-jqgrid input[type="checkbox"]{cursor: pointer;
+    &:after{content: ''; display: flex; width: 20px; height: 20px; border: 1px solid #ccc;
+    border-radius: 4px; background-color: #fff;}
+}
+
+/* jqGrid th,td checkbox 위치 설정 */
+thead tr th[role="columnheader"] div > .cbox ,
+tbody tr td[role="gridcell"] > .cbox{left: 50%; top: 50%; transform: translate(-50%,-50%); margin: 0;}
+
+/* jqGrid th 체크박스 감싸는 div에 height 100%를 줘서 영역확장 */
+.jqChkbox{height: 100% !important;}
+
+.ui-th-ltr{
+    &[colspan]{height: 40px !important;}
+}
+// resize 시 헤더틀어지는 이슈로 인한 리셋값
+.ui-jqgrid .ui-jqgrid-htable th{
+    padding: 0 2px !important;
+}
+.ui-jqgrid tr.jqgrow td{
+    padding: 0 10px !important;
+}
