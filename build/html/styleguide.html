@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta property="og:image" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+<link rel="stylesheet" href="../lib/jquery-ui.css">
+<link rel="stylesheet" href="../lib/jqGrid-4.7.1/css/ui.jqgrid.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/jqGridCustom.css">
+<script src="../lib/jquery-1.12.4.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/jqGrid-4.7.1/js/minified/jquery.jqGrid.min.js"></script>
+<script src="../lib/swiper/js/swiper.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/popup.js"></script>
+<script src="../js/jqGrid.js"></script>
+
+ 
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- container -->
+        <main class="container">
+            <!-- left -->
+            <div class="left">
+                <!-- leftInner -->
+                <div class="leftInner">
+                    <!-- logoArea -->
+                    <div class="logoArea">
+                        <h1>
+                            <a class="logo" href="#" title="K-Geo 플랫폼">
+                                <img src="../images/common/logo.png" alt="K-Geo 플랫폼 로고">
+                            </a>
+                            <a class="logo" href="#" title="KLIS">
+                                <img src="../images/common/logo-KLIS.png" alt="KLIS 로고">
+                            </a>
+                        </h1>
+                        <span class="logoTit">개발부담금</span>
+                    </div>
+                    <!-- //logoArea -->
+                
+                    <!-- loginArea -->
+                    <article class="loginArea">
+                        <!-- inner -->
+                        <div class="inner">
+                            <div class="userInfoArea">
+                                <span class="userAuth">
+                                    <strong>관리자</strong>님
+                                </span>
+                                <span class="areaName">시구군관리</span>
+                            </div>
+                            <div class="btnArea">
+                                <button type="button" class="btnLogin">
+                                    <span>로그아웃</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- //inner -->
+                    </article>
+                    <!-- //loginArea -->
+                </div>
+                <!-- //leftInner -->
+                
+                <!-- lnb -->
+                <nav class="lnb">
+                    <ul class="dep1 overflow-y">
+                        <li>
+                            <a href="javascript:void(0)">
+                            <svg width="22" height="22" viewBox="0 0 22 22">
+                                <g id="icon" transform="translate(-24 -379)">
+                                    <rect id="area" width="22" height="22" transform="translate(24 379)" fill="none"/>
+                                    <path id="패스_600" data-name="패스 600" d="M8.461,0a8.462,8.462,0,1,0,8.462,8.462A8.461,8.461,0,0,0,8.461,0m5.6,7.04-5.4,5.4a1.165,1.165,0,0,1-1.647,0L3.458,8.886A1.165,1.165,0,0,1,5.105,7.239L7.837,9.971l4.578-4.577A1.165,1.165,0,0,1,14.062,7.04" transform="translate(26.538 381.538)" fill="#b4b8c3" fill-rule="evenodd"/>
+                                </g>
+                            </svg>
+                            <span class="dep1Name">인허가 관리</span>
+                            </a>
+                            <ul class="dep2">
+                                <li>
+                                    <a href="javascript:void(0)">인허가 연계정보</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">일반인허가 정보</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="noDepth">
+                            <a href="javascript:void(0)">
+                                <svg width="22" height="22" viewBox="0 0 22 22">
+                                    <g id="icon" transform="translate(-24 -434)">
+                                      <rect id="area" width="22" height="22" transform="translate(24 434)" fill="none"/>
+                                      <g id="icon-2" data-name="icon" transform="translate(26.538 436.538)">
+                                        <path id="패스_601" data-name="패스 601" d="M16.923,3.3c0,1.824-3.789,3.3-8.462,3.3S0,5.125,0,3.3,3.788,0,8.462,0s8.462,1.478,8.462,3.3" transform="translate(0 0)" fill="#b4b8c3" fill-rule="evenodd"/>
+                                        <path id="패스_602" data-name="패스 602" d="M8.462,20.8C3.788,20.8,0,19.528,0,17.956V19.49c0,1.824,3.788,3.3,8.462,3.3s8.462-1.478,8.462-3.3V17.956c0,1.572-3.788,2.846-8.462,2.846" transform="translate(0 -12.868)" fill="#b4b8c3" fill-rule="evenodd"/>
+                                        <path id="패스_603" data-name="패스 603" d="M8.462,31.932C3.788,31.932,0,30.658,0,29.086V30.62c0,1.824,3.788,3.3,8.462,3.3s8.462-1.478,8.462-3.3V29.086c0,1.572-3.788,2.846-8.462,2.846" transform="translate(0 -20.844)" fill="#b4b8c3" fill-rule="evenodd"/>
+                                        <path id="패스_604" data-name="패스 604" d="M8.462,43.063C3.788,43.063,0,41.789,0,40.217v1.534c0,1.824,3.788,3.3,8.462,3.3s8.462-1.478,8.462-3.3V40.217c0,1.572-3.788,2.846-8.462,2.846" transform="translate(0 -28.82)" fill="#b4b8c3" fill-rule="evenodd"/>
+                                      </g>
+                                    </g>
+                                </svg>
+                                <span class="dep1Name">부과대상사업 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <svg width="22" height="22" viewBox="0 0 22 22">
+                                    <g id="icon" transform="translate(-24 -480)">
+                                      <rect id="area" width="22" height="22" transform="translate(24 480)" fill="none"/>
+                                      <path id="icon-2" data-name="icon" d="M15.236,0H1.687A1.687,1.687,0,0,0,0,1.687V20.127H5.258v-5.8h6.407v5.8h5.258V1.687A1.687,1.687,0,0,0,15.236,0M7.522,11.9H4.284V8.666H7.522Zm0-4.961H4.284V3.7H7.522ZM12.639,11.9H9.4V8.666h3.238Zm0-4.961H9.4V3.7h3.238Z" transform="translate(26.538 480.846)" fill="#b4b8c3" fill-rule="evenodd"/>
+                                    </g>
+                                </svg>
+                                <span class="dep1Name">연접사업 관리</span>
+                            </a>
+                            <ul class="dep2">
+                                <li>
+                                    <a href="javascript:void(0)">dep2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">dep2</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- //lnb -->
+            </div>
+            <!-- //left -->
+
+            <!-- right -->
+            <div class="right">
+                <!-- headWrap -->
+                <div class="headWrap">
+                    <!-- tabNav -->
+                    <div class="tabNav">
+                        <ul class="tabList">
+                            <li class="active">
+                                <a href="javascript:void(0)">개발사업관리</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">개발부담금산정관리</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">부과징수관리</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">통계관리</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">업무지원</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">커뮤니티</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //tabNav -->
+
+                </div>
+                <!-- //headWrap -->
+                <!-- content -->
+                <div id="content">
+                    <h2 class="hidden">본문 영역</h2>
+
+                    <!-- tabCont -->
+                    <div class="tabCont active">
+                        <div class="flex col" style="row-gap: 30px;">
+                            <div class="flex ac" style="gap: 20px;">
+                                <button type="button" class="btn type01 bgBlue">
+                                    <span>버튼</span>
+                                </button>
+                                <button type="button" class="btn type01 bgBlue2">
+                                    <span>버튼</span>
+                                </button>
+                                <button type="button" class="btn type01 bgGray">
+                                    <span>버튼</span>
+                                </button>
+                                <button type="button" class="btn type01 bgGray2">
+                                    <span>버튼</span>
+                                </button>
+                                <button type="button" class="btn type01 bgGray3">
+                                    <span>버튼</span>
+                                </button>
+                                <button type="button" class="btn type01 bgWhite">
+                                    <span>버튼</span>
+                                </button>
+                                <button type="button" class="btn type01 bgGray4">
+                                    <span>버튼</span>
+                                </button>
+                                <button type="button" class="btn type01 sm bgWhite">
+                                    <span>small</span>
+                                </button>
+                                <button type="button" class="btn type01 wide bgWhite">
+                                    <span>wide</span>
+                                </button>
+                                <button type="button" class="btn type02 bgWhite">
+                                    <span>type02</span>
+                                </button>
+                                <button type="button" class="btn type03 bgWhite">
+                                    <span>type03</span>
+                                </button>
+                                <button type="button" class="btn type04 bgWhite">
+                                    <span>type04</span>
+                                </button>
+                                <button type="button" class="btn type04 wide bgWhite">
+                                    <span>type04</span>
+                                </button>
+                            </div>
+    
+                            <div class="flex ac" style="gap: 20px;">
+                                <select style="width: 200px;">
+                                    <option></option>
+                                </select>
+                                <select disabled class="disabled" style="width: 200px;">
+                                    <option></option>
+                                </select>
+                                <input type="text" style="width: 200px;"/>
+                                <input type="text" disabled class="disabled" style="width: 200px;"/>
+                            </div>
+
+                            <div class="flex ac" style="gap:20px;">
+                                <div class="checkbox">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="case01"/>
+                                        <label for="case01">
+                                            <svg class="chkShape" width="11.257" height="8.443" viewBox="0 0 11.257 8.443">
+                                                <path id="패스_607" data-name="패스 607" d="M.354,3.153,3.875,6.675,10.2.353" transform="translate(0.354 0.354)" fill="none" stroke="#345284" stroke-miterlimit="10" stroke-width="2"/>
+                                            </svg>
+                                            <span class="labelName">라벨</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="case02"/>
+                                        <label for="case02">
+                                            <svg class="chkShape" width="11.257" height="8.443" viewBox="0 0 11.257 8.443">
+                                                <path id="패스_607" data-name="패스 607" d="M.354,3.153,3.875,6.675,10.2.353" transform="translate(0.354 0.354)" fill="none" stroke="#345284" stroke-miterlimit="10" stroke-width="2"/>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex ac">
+                                <!-- pagination -->
+                                <div class="pagination">
+                                    <button type="button" class="btnFirst" title="맨앞으로">
+                                        <span class="hidden">맨앞으로</span>
+                                        <svg width="13.121" height="13.414" viewBox="0 0 13.121 13.414">
+                                            <g id="icon" transform="translate(1.414 0.707)">
+                                              <path id="arrow" d="M1206,1446l-6,6,6,6" transform="translate(-1195 -1446)" fill="none" stroke="#bbb" stroke-width="2"/>
+                                              <path id="arrow-2" data-name="arrow" d="M1206,1446l-6,6,6,6" transform="translate(-1200 -1446)" fill="none" stroke="#bbb" stroke-width="2"/>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btnPrev" title="이전페이지">
+                                        <span class="hidden">이전페이지</span>
+                                        <svg width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="arrow" d="M1206,1446l-6,6,6,6" transform="translate(-1198.586 -1445.293)" fill="none" stroke="#bbb" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#">5</a>
+                                    <a href="#">6</a>
+                                    <a href="#">7</a>
+                                    <a href="#">8</a>
+                                    <a href="#">9</a>
+                                    <a href="#">10</a>
+                                    <button type="button" class="btnNext" title="다음페이지">
+                                        <span class="hidden">다음페이지</span>
+                                        <svg width="8.121" height="13.414" viewBox="0 0 8.121 13.414">
+                                            <path id="arrow" d="M1200,1446l6,6-6,6" transform="translate(-1199.293 -1445.293)" fill="none" stroke="#bbb" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btnLast" title="맨뒤로">
+                                        <span class="hidden">맨뒤로</span>
+                                        <svg width="13.121" height="13.414" viewBox="0 0 13.121 13.414">
+                                            <g id="icon" transform="translate(-16.293 -13.293)">
+                                              <path id="arrow" d="M1200,1446l6,6-6,6" transform="translate(-1183 -1432)" fill="none" stroke="#bbb" stroke-width="2"/>
+                                              <path id="arrow-2" data-name="arrow" d="M1200,1446l6,6-6,6" transform="translate(-1178 -1432)" fill="none" stroke="#bbb" stroke-width="2"/>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- //pagination -->
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <!-- //tabCont -->
+
+                    <!-- tabCont -->
+                    <div class="tabCont">
+                        2
+                    </div>
+                    <!-- //tabCont -->
+
+                    <!-- tabCont -->
+                    <div class="tabCont">
+                        3
+                    </div>
+                    <!-- //tabCont -->
+
+                    <!-- tabCont -->
+                    <div class="tabCont">
+                        4
+                    </div>
+                    <!-- //tabCont -->
+
+                    <!-- tabCont -->
+                    <div class="tabCont">
+                        5
+                    </div>
+                    <!-- //tabCont -->
+
+                    <!-- tabCont -->
+                    <div class="tabCont">
+                        6
+                    </div>
+                    <!-- //tabCont -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right -->
+        </main>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

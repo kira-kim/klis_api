@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta property="og:image" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+<link rel="stylesheet" href="../lib/jquery-ui.css">
+<link rel="stylesheet" href="../lib/jqGrid-4.7.1/css/ui.jqgrid.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/jqGridCustom.css">
+<script src="../lib/jquery-1.12.4.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/jqGrid-4.7.1/js/minified/jquery.jqGrid.min.js"></script>
+<script src="../lib/swiper/js/swiper.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/popup.js"></script>
+<script src="../js/jqGrid.js"></script>
+
+ 
+    <title>KLIS API연계 관리</title>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap" class="">
+        <!-- container -->
+        <main class="container">
+            <!-- left -->
+<div class="left">
+    <!-- leftInner -->
+    <div class="leftInner">
+        <!-- logoArea -->
+        <div class="logoArea">
+            <h1>
+                <a class="logo" href="#" title="K-Geo 플랫폼">
+                    <img src="../images/common/logo.png" alt="K-Geo 플랫폼 로고">
+                </a>
+                <a class="logo" href="#" title="KLIS">
+                    <img src="../images/common/logo-KLIS.png" alt="KLIS 로고">
+                </a>
+            </h1>
+            <span class="logoTit">개발부담금</span>
+        </div>
+        <!-- //logoArea -->
+    
+        <!-- loginArea -->
+        <article class="loginArea">
+            <h2 class="hidden">login 상세정보</h2>
+            <!-- inner -->
+            <div class="inner">
+                <div class="userInfoArea">
+                    <span class="userAuth">
+                        <strong>관리자관리자</strong>님
+                    </span>
+                    <div class="userinfo">
+                        <span class="info">최종 접속 시간 : 2022.11.17 14:05:53</span>
+                    </div>
+                </div>
+                <div class="current_area">
+                    <div class="current_title">현재지역</div>
+                    <div class="input_area">
+                        <div class="inp_box">
+                            <select id="s01" class="area_sel" disabled>
+                                <option>경상북도</option>
+                            </select>
+                        </div>
+                        <div class="inp_box">
+                            <select id="s01" class="area_sel">
+                                <option>포항시남구</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnArea">
+                    <button type="button" class="btnLogin">
+                        <span>로그아웃</span>
+                    </button>
+                </div>
+            </div>
+            <!-- //inner -->
+        </article>
+        <!-- //loginArea -->
+    </div>
+    <!-- //leftInner -->
+    <!-- lnb -->
+    <nav class="lnb">
+        <ul class="dep1 overflow-y">
+            <li class="check">
+                <a href="javascript:void(0)">
+                <span class="dep1Name">인허가 관리 인허가 관리</span>
+                </a>
+                <ul class="dep2">
+                    <li>
+                        <a href="javascript:void(0)">인허가 연계정보 인허가 연계정보</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">일반인허가 정보정보정보</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="database noDepth">
+                <a href="javascript:void(0)">
+                    <span class="dep1Name">부과대상사업 관리</span>
+                </a>
+            </li>
+            <li class="building">
+                <a href="javascript:void(0)">
+                    <span class="dep1Name">연접사업 관리</span>
+                </a>
+                <ul class="dep2">
+                    <li>
+                        <a href="javascript:void(0)">dep2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">dep2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- //lnb -->
+</div>
+<!-- //left --> 
+            <!-- right -->
+            <div class="right">
+                <!-- headWrap -->
+                <div class="headWrap">
+                    <!-- gnb -->
+                    <div class="gnb">
+                        <ul>
+                            <li class="active">
+                                <a href="#">API 연계관리</a>
+                            </li>
+                            <li>
+                                <a href="#">환경관리</a>
+                            </li>
+                            <li>
+                                <a href="#">Kgeop(admin)</a>
+                            </li>
+                            <li>
+                                <a href="#">운영홈페이지</a>
+                            </li>
+                            <li>
+                                <a href="#">도움말 게시판관리</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //gnb -->
+
+                    <!-- util -->
+                    <article class="util">
+                        <ul class="menu">
+                            <li>
+                                <a href="javascript:void(0)">유지관리홈페이지</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">원격지원</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">사이트안내</a>
+                            </li>
+                        </ul>
+                        <div class="btnArea">
+                            <button type="button" class="scale btnScaleUp" title="크기 확대">
+                                <span class="hidden">크기 확대</span>
+                            </button>
+                            <button type="button" class="scale btnScaleDown" title="크기 축소">
+                                <span class="hidden">크기 축소</span>
+                            </button>
+                        </div>
+                    </article>
+                    <!-- //util -->
+                </div>
+                <!-- //headWrap -->
+                <!-- content -->
+                <div id="content">
+                    <h2 class="hidden">본문 영역</h2>
+
+                    <!-- contArea -->
+                    <div class="contArea">
+                        <!-- titArea -->
+                        <div class="titArea">
+                            <h3 class="titPage mrA">
+                                <strong>연계 시스템 관리</strong>
+                            </h3>
+
+                            <div class="flex col acfe">
+                                <!-- breadCrumb -->
+                                <div class="breadCrumb">
+                                    <ul>
+                                        <li class="home">
+                                            <a href="javascript:void(0)">
+                                                <span class="hidden">홈</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">KLIS 연계 관리</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">연계 시스템 관리</a>
+                                        </li>
+                                        <li class="current">
+                                            <a href="javascript:void(0)">연계 시스템 수정</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //breadCrumb -->
+
+                                <!-- btnArea -->
+                                <div class="btnArea">
+                                    <button type="button" class="btn type01 bgPrimary btnHelp" title="도움말">
+                                        <span>도움말</span>
+                                    </button>
+                                </div>
+                                <!-- btnArea -->
+                            </div>
+                        </div>
+                        <!-- //titArea -->
+
+                        <!-- boardArea -->
+                        <article class="boardArea">
+                            <!-- inner -->
+                            <div class="inner">
+
+                                <!-- secContainer -->
+                                <section class="secContainer">
+                                    <!-- titSecBox -->
+                                    <div class="titSecBox">
+                                        <h4 class="tit arrowBullet">
+                                            <strong>연계 시스템 수정</strong>
+                                        </h4>
+                                        <p class="desc">(등록일자 : 2020-04-27 / 최종수정일자 : <span>2022-05-27 13:16</span>)</p>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn sm type05 bgPrimary2">
+                                                <span>수정</span>
+                                            </button>
+                                            <button type="button" class="btn sm type05 bgGray">
+                                                <span>목록</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //titSecBox -->
+
+                                    <!-- table -->
+                                    <div class="table">
+                                        <table>
+                                            <caption>연계 시스템 수정 테이블로 시스템코드, 지역코드, 시스템명, 상태, 기관정보, 담당정보, 신청정보, 접속정보를 제공합니다.</caption>
+                                            <colgroup>
+                                                <col style="width:160px;"/>
+                                                <col style="width:640px;"/>
+                                                <col style="width:160px;"/>
+                                                <col style="width:auto;"/>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="i01">시스템코드</label>
+                                                    </th>
+                                                    <td colspan="3">
+                                                        <div class="inputGroup">
+                                                            <div class="inputBox">
+                                                                <input type="text" value="GAOK000033" disabled="" class="disabled" id="i01" style="max-width: 136px;">
+                                                                <button type="button" class="btn type03 bgOrange" title="키발급">
+                                                                    <span>키발급</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="i02" class="dot red">지역코드</label>
+                                                    </th>
+                                                    <td colspan="3">
+                                                        <div class="inputGroup">
+                                                            <div class="inputBox">
+                                                                <input type="text" disabled="" class="disabled" id="i02" style="width: 200px;">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="i03" class="dot red">시스템명</label>
+                                                    </th>
+                                                    <td>
+                                                        <input type="text" id="i03" value="경산시 공간정보기간 소통행정 공간플랫폼">
+                                                    </td>
+                                                    <th scope="row">
+                                                        <label for="s01">상태</label>
+                                                    </th>
+                                                    <td>
+                                                        <select id="s01">
+                                                            <option>연계</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label>기관정보</label>
+                                                    </th>
+                                                    <td style="padding: 0;">
+                                                        <table class="doubleTable">
+                                                            <caption>기관정보로 기관명, 전화번호, 팩스번호를 제공합니다.</caption>
+                                                            <colgroup>
+                                                                <col style="width:108px;"/>
+                                                                <col style="width:auto;"/>
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i04">기관명</label></th>
+                                                                    <td><input type="text" id="i04" value="경산시청"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i05">전화번호</label></th>
+                                                                    <td><input type="text" id="i05" value="053-810-6389"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i06">팩스번호</label></th>
+                                                                    <td><input type="text" id="i06" value="053-810-6389"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <th scope="row">
+                                                        <label>담당정보</label>
+                                                    </th>
+                                                    <td style="padding: 0;">
+                                                        <table class="doubleTable">
+                                                            <caption>담당정보로 성명, 직위, 부서, 전화번호, 전자메일을 제공합니다.</caption>
+                                                            <colgroup>
+                                                                <col style="width:108px;"/>
+                                                                <col style="width:210px;"/>
+                                                                <col style="width:108px;"/>
+                                                                <col style="width:auto;"/>
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i07">성명</label></th>
+                                                                    <td><input type="text" id="i07" value="박재우"></td>
+                                                                    <th scope="row" class="type02"><label for="i08">직위</label></th>
+                                                                    <td><input type="text" id="i08" value="주무관"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i09">부서</label></th>
+                                                                    <td><input type="text" id="i09" value="토지정보과"></td>
+                                                                    <th scope="row" class="type02"><label for="i10">전화번호</label></th>
+                                                                    <td><input type="text" id="i10" value="053-810-6389"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i11">전자메일</label></th>
+                                                                    <td colspan="3"><input type="text" id="i11" value="wool@krea.com"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">신청정보</th>
+                                                    <td style="padding: 0;">
+                                                        <table class="doubleTable">
+                                                            <caption>신청정보로 신청일자, 기관명, 성명, 직위를 제공합니다.</caption>
+                                                            <colgroup>
+                                                                <col style="width:108px;"/>
+                                                                <col style="width:auto;"/>
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i12">신청일자</label></th>
+                                                                    <td>
+                                                                        <div class="inputGroup">
+                                                                            <input type="text" class="cal" id="i12" />
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i13">기관명</label></th>
+                                                                    <td><input type="text" id="i13" value="토지정보과-6267(2020.4.21)"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i14">성명</label></th>
+                                                                    <td><input type="text" id="i14" value="박재우"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row" class="type02"><label for="i15">직위</label></th>
+                                                                    <td><input type="text" id="i15" value="주무관"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <th scope="row">접속정보</th>
+                                                    <td style="padding: 0;">
+                                                        <table class="doubleTable">
+                                                            <caption>접속정보로 허용IP와 차단IP를 제공합니다.</caption>
+                                                            <colgroup>
+                                                                <col style="width:160px;"/>
+                                                                <col style="width:auto;"/>
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr style="height: 92px;">
+                                                                    <th scope="row" class="type02">
+                                                                        <div class="flex jc ac">
+                                                                            <span>허용IP</span>
+                                                                            <button type="button" class="btn type05 bgWhite" style="margin-left: 10px;">추가</button>
+                                                                        </div>
+                                                                    </th>
+                                                                    <td>
+                                                                        <div class="tdDiv">
+                                                                            <div class="inputGroup">
+                                                                                <input type="text" title="허용IP">
+                                                                                <span class="dash">~</span>
+                                                                                <input type="text" title="허용IP">
+                                                                                <button type="button" class="btn type03 bgGray2">삭제</button>
+                                                                            </div>
+                                                                            <div class="inputGroup">
+                                                                                <input type="text" title="허용IP">
+                                                                                <span class="dash">~</span>
+                                                                                <input type="text" title="허용IP">
+                                                                                <button type="button" class="btn type03 bgGray2">삭제</button>
+                                                                            </div>
+                                                                            <div class="inputGroup">
+                                                                                <input type="text" title="허용IP">
+                                                                                <span class="dash">~</span>
+                                                                                <input type="text" title="허용IP">
+                                                                                <button type="button" class="btn type03 bgGray2">삭제</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height: 92px;">
+                                                                    <th scope="row" class="type02">
+                                                                        <div class="flex jc ac">
+                                                                            <span>차단IP</span>
+                                                                            <button type="button" class="btn type05 bgWhite" style="margin-left: 10px;">추가</button>
+                                                                        </div>
+                                                                    </th>
+                                                                    <td style="overflow: auto;">
+                                                                        <div class="tdDiv">
+                                                                            <div class="inputGroup">
+                                                                                <input type="text" title="차단IP">
+                                                                                <span class="dash">~</span>
+                                                                                <input type="text" title="차단IP">
+                                                                                <button type="button" class="btn type03 bgGray2">삭제</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //table -->
+
+                                     <!-- titSecBox -->
+                                     <div class="titSecBox">
+                                        <h4 class="tit arrowBullet">
+                                            <strong>하위 연계 시스템 리스트</strong>
+                                        </h4>
+                                        <!-- <p class="desc">(등록일자 : 2020-04-27 / 최종수정일자 : <span>2022-05-27 13:16</span>)</p> -->
+                                        <div class="btnArea">
+                                            <button type="button" class="btn type05 sm2 bgGray" title="하위 연계 시스템 추가">
+                                                <span>하위 연계 시스템 추가</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //titSecBox -->
+                                    <!-- table -->
+                                    <div class="table column hover hscroll_line10">
+                                        <!-- gridTable -->
+                                        <table id="gridTable10" style="width: 2272px;">
+
+                                        </table>
+                                        <!-- //gridTable -->
+                                    </div>
+                                    <!-- //table -->
+
+                                    <!-- titSecBox -->
+                                    <div class="titSecBox">
+                                        <h4 class="tit arrowBullet">
+                                            <strong>대상 시스템 서비스 리스트</strong>
+                                        </h4>
+                                        <!-- <p class="desc">(등록일자 : 2020-04-27 / 최종수정일자 : <span>2022-05-27 13:16</span>)</p> -->
+                                        <div class="btnArea">
+                                            <button type="button" class="btn type05 sm2 bgGray" title="연계 서비스 추가">
+                                                <span>연계 서비스 추가</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //titSecBox -->
+                                    <!-- table -->
+                                    <div class="table column hover hscroll_line10">
+                                        <!-- gridTable -->
+                                        <table id="gridTable13" style="width: 2272px;">
+
+                                        </table>
+                                        <!-- //gridTable -->
+                                    </div>
+                                    <!-- //table -->
+                                </section>
+                                <!-- //secContainer -->
+                            </div>
+                            <!-- //inner -->
+                        </article>
+                        <!-- //boardArea -->
+                    </div>
+                    <!-- //contArea -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right -->
+        </main>
+        <!-- //container -->
+
+
+        <!-- popup -->
+        <!-- disply: block 삭제후 사용 -->
+        <div class="popup uiDrag popup02" style="width: 922px; display: block;">
+            <!-- head -->
+            <div class="head">
+                <p class="popTit">연계 서비스 관리(연계 서비스 수정)</p>
+                <button type="button" class="btnClose">
+                    <span class="hidden">팝업 닫기</span>
+                </button>
+            </div>
+            <!-- //head -->
+            <!-- cont -->
+            <div class="cont dragCancel">
+                <!-- secContainer -->
+                <section class="secContainer">
+                    <!-- <div class="titSecBox type03">
+                        <h5 class="tit">
+                            <strong>상세정보</strong>
+                        </h5>
+                        <div class="btnArea">
+                            <button type="button" class="btn type05 sm2 bgGray" title="초기화">
+                                <span>초기화</span>
+                            </button>
+                            <button type="button" class="btn type05 sm2 bgGray" title="삭제">
+                                <span>삭제</span>
+                            </button>
+                        </div>
+                    </div> -->
+
+                    <!-- tableContainer -->
+                    <article class="tableContainer">
+                        <!-- table -->
+                        <div class="table type02">
+                            <table>
+                                <caption>대상 시스템 서비스 리스트의 서비스 수정 테이블로 시스템명, 서비스명, 서비스기간, 서비스상태, 접근테이블, 서비스내용을 제공합니다</caption>
+                                <colgroup>
+                                    <col style="width: 150px;"/>
+                                    <col style="width: 290px;"/>
+                                    <col style="width: 150px;"/>
+                                    <col style="width: auto;"/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <label>시스템명</label>
+                                        </th>
+                                        <td>
+                                            <span>경산시 공간정보기간 소통행정 공간플랫폼</span>
+                                        </td>
+                                        <th scope="row">
+                                            <label>서비스명</label>
+                                        </th>
+                                        <td>
+                                            <span>중개업등록번호로조회</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label>서비스기간</label>
+                                        </th>
+                                        <td>
+                                            <div class="inputGroup">
+                                                <input type="text" class="cal" title="서비스기간 시작일">
+                                                <span class="dash">~</span>
+                                                <input type="text" class="cal" title="서비스기간 마지막일">
+                                            </div>
+                                        </td>
+                                        <th scope="row">
+                                            <label for="s02">서비스상태</label>
+                                        </th>
+                                        <td>
+                                           <select id="s02">
+                                                <option>사용</option>
+                                           </select> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="s03">접근테이블</label>
+                                        </th>
+                                        <td colspan="3">
+                                            <div class="inputGroup">
+                                                <select id="s03">
+                                                    <option>접근 테이블 목록</option>
+                                                </select>
+                                                <button type="button" class="btn type03 sm bgOrange" title="추가">
+                                                    <span>추가</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="i16">서비스내용</label>
+                                        </th>
+                                        <td colspan="3">
+                                            <input type="text" id="i16">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+                    </article>
+                    <!-- //tableContainer -->
+
+                    <div class="btnArea jc">
+                        <button type="button" class="btn type04 bgWhite wide">
+                            <span>취소</span>
+                        </button>
+                        <button type="button" class="btn type04 bgWine wide">
+                            <span>저장</span>
+                        </button>
+                    </div>
+                </section>
+                <!-- //secContainer --> 
+
+            
+            </div>
+            <!-- //cont -->
+        </div>
+        <!-- //popup -->
+        <div class="dimmed" style="display: block;"></div>
+
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

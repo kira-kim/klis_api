@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta property="og:image" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+<link rel="stylesheet" href="../lib/jquery-ui.css">
+<link rel="stylesheet" href="../lib/jqGrid-4.7.1/css/ui.jqgrid.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/jqGridCustom.css">
+<script src="../lib/jquery-1.12.4.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/jqGrid-4.7.1/js/minified/jquery.jqGrid.min.js"></script>
+<script src="../lib/swiper/js/swiper.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/popup.js"></script>
+<script src="../js/jqGrid.js"></script>
+
+ 
+    <title>KLIS API연계 관리</title>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap" class="">
+        <!-- container -->
+        <main class="container">
+            <!-- left -->
+<div class="left">
+    <!-- leftInner -->
+    <div class="leftInner">
+        <!-- logoArea -->
+        <div class="logoArea">
+            <h1>
+                <a class="logo" href="#" title="K-Geo 플랫폼">
+                    <img src="../images/common/logo.png" alt="K-Geo 플랫폼 로고">
+                </a>
+                <a class="logo" href="#" title="KLIS">
+                    <img src="../images/common/logo-KLIS.png" alt="KLIS 로고">
+                </a>
+            </h1>
+            <span class="logoTit">개발부담금</span>
+        </div>
+        <!-- //logoArea -->
+    
+        <!-- loginArea -->
+        <article class="loginArea">
+            <h2 class="hidden">login 상세정보</h2>
+            <!-- inner -->
+            <div class="inner">
+                <div class="userInfoArea">
+                    <span class="userAuth">
+                        <strong>관리자관리자</strong>님
+                    </span>
+                    <div class="userinfo">
+                        <span class="info">최종 접속 시간 : 2022.11.17 14:05:53</span>
+                    </div>
+                </div>
+                <div class="current_area">
+                    <div class="current_title">현재지역</div>
+                    <div class="input_area">
+                        <div class="inp_box">
+                            <select id="s01" class="area_sel" disabled>
+                                <option>경상북도</option>
+                            </select>
+                        </div>
+                        <div class="inp_box">
+                            <select id="s01" class="area_sel">
+                                <option>포항시남구</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnArea">
+                    <button type="button" class="btnLogin">
+                        <span>로그아웃</span>
+                    </button>
+                </div>
+            </div>
+            <!-- //inner -->
+        </article>
+        <!-- //loginArea -->
+    </div>
+    <!-- //leftInner -->
+    <!-- lnb -->
+    <nav class="lnb">
+        <ul class="dep1 overflow-y">
+            <li class="check">
+                <a href="javascript:void(0)">
+                <span class="dep1Name">인허가 관리 인허가 관리</span>
+                </a>
+                <ul class="dep2">
+                    <li>
+                        <a href="javascript:void(0)">인허가 연계정보 인허가 연계정보</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">일반인허가 정보정보정보</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="database noDepth">
+                <a href="javascript:void(0)">
+                    <span class="dep1Name">부과대상사업 관리</span>
+                </a>
+            </li>
+            <li class="building">
+                <a href="javascript:void(0)">
+                    <span class="dep1Name">연접사업 관리</span>
+                </a>
+                <ul class="dep2">
+                    <li>
+                        <a href="javascript:void(0)">dep2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">dep2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- //lnb -->
+</div>
+<!-- //left --> 
+            <!-- right -->
+            <div class="right">
+                <!-- headWrap -->
+                <div class="headWrap">
+                    <!-- gnb -->
+                    <div class="gnb">
+                        <ul>
+                            <li class="active">
+                                <a href="#">API 연계관리</a>
+                            </li>
+                            <li>
+                                <a href="#">환경관리</a>
+                            </li>
+                            <li>
+                                <a href="#">Kgeop(admin)</a>
+                            </li>
+                            <li>
+                                <a href="#">운영홈페이지</a>
+                            </li>
+                            <li>
+                                <a href="#">도움말 게시판관리</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //gnb -->
+
+                    <!-- util -->
+                    <article class="util">
+                        <ul class="menu">
+                            <li>
+                                <a href="javascript:void(0)">유지관리홈페이지</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">원격지원</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">사이트안내</a>
+                            </li>
+                        </ul>
+                        <div class="btnArea">
+                            <button type="button" class="scale btnScaleUp" title="크기 확대">
+                                <span class="hidden">크기 확대</span>
+                            </button>
+                            <button type="button" class="scale btnScaleDown" title="크기 축소">
+                                <span class="hidden">크기 축소</span>
+                            </button>
+                        </div>
+                    </article>
+                    <!-- //util -->
+                </div>
+                <!-- //headWrap -->
+                <!-- content -->
+                <div id="content">
+                    <h2 class="hidden">본문 영역</h2>
+
+                    <!-- contArea -->
+                    <div class="contArea">
+                        <!-- titArea -->
+                        <div class="titArea">
+                            <h3 class="titPage mrA">
+                                <strong>연계 서비스 관리</strong>
+                            </h3>
+
+                            <div class="flex col acfe">
+                                <!-- breadCrumb -->
+                                <div class="breadCrumb">
+                                    <ul>
+                                        <li class="home">
+                                            <a href="javascript:void(0)">
+                                                <span class="hidden">홈</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">KLIS 연계 관리</a>
+                                        </li>
+                                        <li class="current">
+                                            <a href="javascript:void(0)">연계 서비스 관리</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //breadCrumb -->
+
+                                <!-- btnArea -->
+                                <div class="btnArea">
+                                    <button type="button" class="btn type01 bgPrimary btnHelp" title="도움말">
+                                        <span>도움말</span>
+                                    </button>
+                                </div>
+                                <!-- btnArea -->
+                            </div>
+                        </div>
+                        <!-- //titArea -->
+
+                        <!-- boardArea -->
+                        <article class="boardArea">
+                            <!-- inner -->
+                            <div class="inner">
+
+                                <!-- secContainer -->
+                                <section class="secContainer">
+                                    <!-- resultContainer -->
+                                    <div class="resultContainer">
+                                        <div class="titSecBox"></div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn type05 sm bgPrimary2" title="수정">
+                                                <span>수정</span>
+                                            </button>
+                                            <button type="button" class="btn type05 sm bgGray" title="목록">
+                                                <span>목록</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //resultContainer -->
+                                    <!-- table -->
+                                    <div class="table column hover overflow-x">
+                                        <!-- gridTable -->
+                                        <table id="gridTable12" style="width: 2272px;">
+
+                                        </table>
+                                        <!-- //gridTable -->
+                                    </div>
+                                    <!-- //table -->
+                                    <div class="pos-r">
+                                    <!-- pagination -->
+                                        <div class="pagination">
+                                            <button type="button" class="btnFirst" title="맨앞으로">
+                                                <span class="hidden">맨앞으로</span>
+                                            </button>
+                                            <button type="button" class="btnPrev" title="이전페이지">
+                                                <span class="hidden">이전페이지</span>
+                                            </button>
+                                            <a href="#" class="active">1</a>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <a href="#">8</a>
+                                            <a href="#">9</a>
+                                            <a href="#">10</a>
+                                            <button type="button" class="btnNext" title="다음페이지">
+                                                <span class="hidden">다음페이지</span>
+                                            </button>
+                                            <button type="button" class="btnLast" title="맨뒤로">
+                                                <span class="hidden">맨뒤로</span>
+                                            </button>
+                                        </div>
+                                        <!-- //pagination -->
+                                    </div>
+                                </section>
+                                <!-- //secContainer -->
+                                <!-- secContainer -->
+                                <section class="secContainer">
+                                    <!-- titSecBox -->
+                                    <div class="titSecBox">
+                                        <h4 class="tit arrowBullet">
+                                            <strong>서비스 수정</strong>
+                                        </h4>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn type05 sm bgGray" title="닫기">
+                                                <span>닫기</span>
+                                            </button>
+                                            <button type="button" class="btn type05 sm bgPrimary2" title="저장">
+                                                <span>저장</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //titSecBox -->
+                                    <!-- table -->
+                                    <div class="table">
+                                        <table>
+                                            <caption>연계서비스관리의 서비스 수정으로 서비스코드, 서비스명, 상세설명을 제공합니다</caption>
+                                            <colgroup>
+                                                <col style="width:200px;"/>
+                                                <col style="width:auto;"/>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="i01">서비스코드</label>
+                                                    </th>
+                                                    <td>
+                                                        <div class="inputGroup">
+                                                            <div class="inputBox">
+                                                                <input type="text" value="SVC000045" id="i01">
+                                                                <button type="button" class="btn type03 sm bgOrange" title="입력">
+                                                                    <span>입력</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="i02">서비스 명</label>
+                                                    </th>
+                                                    <td>
+                                                        <input type="text" id="i02">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <label for="i03">상세 설명</label>
+                                                    </th>
+                                                    <td>
+                                                        <input type="text" id="i03">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //table -->
+                                </section>
+                                <!-- //secContainer -->
+                            </div>
+                            <!-- //inner -->
+                        </article>
+                        <!-- //boardArea -->
+                    </div>
+                    <!-- //contArea -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //right -->
+        </main>
+        <!-- //container -->
+
+    </div>
+    <!-- //wrap -->
+</body>
+</html>
